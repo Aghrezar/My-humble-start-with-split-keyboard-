@@ -1,7 +1,7 @@
 {
-  "keyboard_name": "E5c4r107",
+  "keyboard_name": "E5C4R107",
     "manufacturer": "Aghrezar",
-    "url": "no",
+    "url": "no 4 now",
     "maintainer": "Aghrezar",
     "diode_direction": "COL2ROW",
     "split": {
@@ -24,8 +24,8 @@
     "processor": "atmega32u4",
     "usb": {
         "device_version": "1.0.0",
-        "pid": "0x0032",
-        "vid": "0x534B"
+        "pid": "0x04D8",
+        "vid": "0xEB2D"
     },
  
     "layouts": {
