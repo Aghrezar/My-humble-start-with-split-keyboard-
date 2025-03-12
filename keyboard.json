@@ -6,9 +6,9 @@
     "processor": "atmega32u4",
     "split": {
         "enabled": true,
-        "serial": {
-            "pin": "D0"
-        }
+        "soft_serial_pin": "D0",
+	    "usb_detect":{
+		    "enabled": true}
 },
     "features": {
         "bootmagic": false,
