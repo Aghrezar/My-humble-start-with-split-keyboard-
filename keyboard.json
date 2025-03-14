@@ -4,8 +4,8 @@
     "url": "no 4 now",
     "usb": {
         "device_version": "1.0.0",
-        "pid": "0x04D8",
-        "vid": "0xEB2D"
+        "pid": "0x0000",
+        "vid": "0xFEED"
                                   },
 	
     "diode_direction": "COL2ROW",
