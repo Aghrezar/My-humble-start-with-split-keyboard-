@@ -1,29 +1,30 @@
 {
     "manufacturer": "Aghrezar",
     "keyboard_name": "e5c4r107",
-    "url": "no 4 now",
+    "diode_direction": "COL2ROW",
+	"processor": "atmega32u4",
+	"bootloader": "caterina",
+	"url": "",
     "usb": {
         "device_version": "1.0.0",
         "pid": "0x0000",
         "vid": "0xFEED"
-                                  },
-	
-    "diode_direction": "COL2ROW",
-    "bootloader": "caterina",
-    "processor": "atmega32u4",
+						},
     "features": {
-        "bootmagic": false,
+        "bootmagic": true,
         "extrakey": true,
         "mousekey": true,
-	      "oled": true
-                                   },
- 
+						},
+
+	
+
 
         "matrix_pins": {
                 "cols": ["D4", "C6", "D7", "E6", "B4", "B5"],
                 "rows": ["F7", "B1", "B3", "B2", "B6"]
-                                                           },
-        
+														},
+
+							
 
 
     "layouts": {
