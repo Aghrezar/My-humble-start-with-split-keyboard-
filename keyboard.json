@@ -17,12 +17,6 @@
         "mousekey": true,
 	      "oled": true
                                    },
-    "split": {
-        "enabled": true,
-        "soft_serial_pin": "D0",
-	    "usb_detect":{
-		    "enabled": true}
-                                   },
  
 
         "matrix_pins": {
@@ -30,9 +24,6 @@
                 "rows": ["F7", "B1", "B3", "B2", "B6"]
                                                            },
         
-	"ws2812": {
-       		    "pin": "D3"
-   			        },
 
 
     "layouts": {
