@@ -1,1 +1,2 @@
 OLED_ENABLE = yes
+SPLIT_KEYBOARD = yes
