@@ -1,10 +1,9 @@
-So first of all, this would be a hand wired keyboard inspired by Lily58 keyboard.
+So first of all, this would be a hand wired build inspired by Lily58 keyboard.
 
-I am on a strict budget, so no pcb for me. And I don't like rgbled's.
+I am on a strict budget, so no pcb for me. And I don't like rgbled's, so no rgbleds ether.
 
-I'll 3D the shell and maybe make the keyboard hotswapadle as well.
+I'll 3D the shell.
 
-Hotswap sockets would be 3d printed too.
 
 parts required:
 
