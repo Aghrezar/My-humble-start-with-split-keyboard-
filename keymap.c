@@ -63,7 +63,7 @@ case _QWERTY :
 oled_write("QWERTY", FALSE);
 break;
 case _NUM :
-oled_write("Numpad mode", FALSE);
+oled_write("Numpad toggled", FALSE);
 break;
 case _FKEY :
 oled_write("F keys", FALSE);
