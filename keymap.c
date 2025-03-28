@@ -46,3 +46,34 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                          _______, _______, _______, _______,                  _______, _______, _______, _______
 )
 };
+
+
+#ifdef OLED_ENABLE
+
+oled_rotation_t oled_init_user(oled_rotation_t rotation) {
+  if (!is_keyboard_master())
+    return OLED_ROTATION_180;  // flips the display 180 degrees if offhand
+  return rotation;
+}
+
+bool olde_task_user(){
+  oled_set_cursor(0, 1);
+switch (get_highest_layer(layer_state)) {
+case _QWERTY :
+oled_write("QWERTY", FALSE);
+break;
+case _NUM :
+oled_write("Numpad mode", FALSE);
+break;
+case _FKEY :
+oled_write("F keys", FALSE);
+break;
+case _MOUSE :
+oled_write("Mouse mode", FALSE);
+break;
+}
+return false;
+  
+}
+
+#endif
