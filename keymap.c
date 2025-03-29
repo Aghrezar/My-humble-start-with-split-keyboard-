@@ -11,11 +11,11 @@ enum layer_number {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    
     [_QWERTY] = LAYOUT(
-  KC_ESC,     KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                             KC_6,    KC_7   KC_8,     KC_9,    KC_0,     KC_BSPC,
+  KC_ESC,     KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                             KC_6,    KC_7,   KC_8,     KC_9,    KC_0,     KC_BSPC,
   KC_TAB,     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                             KC_Y,    KC_U,  KC_I,     KC_O,    KC_P,     KC_MINS,
   KC_LSFT,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                             KC_H,    KC_J,  KC_K,     KC_L,    KC_SCLN,  KC_QUOT,
   KC_LCTL,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B, KC_LBRC,           KC_RBRC, KC_N,    KC_M,  KC_COMM,  KC_DOT,  KC_SLSH,  KC_RCTL,
-                        TG_(_NUM), KC_LGUI, KC_LALT, KC_SPC,                  KC_ENT,  KC_RALT,  KC_GRV,  MO_(_FKEY)
+                        MO(_NUM), KC_LGUI, KC_LALT, KC_SPC,                  KC_ENT,  KC_RALT,  KC_GRV,  MO(_FKEY)
  ),
 
 
@@ -25,7 +25,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, XXXXXXX, XXXXXXX, XXXXXXX,  KC_UP,  XXXXXXX,                             KC_INSERT, KC_PGDN, KC_P4,  KC_P5,  KC_P6,   KC_PMNS,
   KC_CAPS, XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,                             KC_DEL,    KC_HOME, KC_P1,  KC_P2,  KC_P3,   KC_PPLS,
   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_COPY,           KC_PSTE, KC_EXEC,   KC_END,  KC_P0, XXXXXXX, KC_PCMM, KC_PEQL,
-                        _______, _______, _______, _______,                   _______, _______, _______, MO_(_MOUSE)
+                        _______, _______, _______, _______,                   _______, _______, _______, MO(_MOUSE)
 ),
 
 //fkey
@@ -34,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, KC_F11,  KC_F12,  KC_F13,  KC_F14,  KC_F15,                              KC_F16,  KC_F17,  KC_F18,  KC_F19,  KC_F20,  XXXXXXX,
   _______, KC_F21,  KC_F22,  KC_F23,  KC_F24,  XXXXXXX,                             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_LBRC,           KC_RBRC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                    MO_(_MOUSE), _______, _______, _______,                  _______, _______, _______, _______
+                    MO(_MOUSE), _______, _______, _______,                  _______, _______, _______, _______
 ),
 
 //mouse
@@ -56,24 +56,27 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
   return rotation;
 }
 
-bool olde_task_user(){
+bool oled_task_user() {
+  // Set cursor position
   oled_set_cursor(0, 1);
-switch (get_highest_layer(layer_state)) {
-case _QWERTY :
-oled_write("QWERTY", FALSE);
-break;
-case _NUM :
-oled_write("Numpad toggled", FALSE);
-break;
-case _FKEY :
-oled_write("F keys", FALSE);
-break;
-case _MOUSE :
-oled_write("Mouse mode", FALSE);
-break;
-}
-return false;
-  
+
+  // Switch on current active layer
+  switch (get_highest_layer(layer_state)) {
+      case _QWERTY :
+          oled_write("QWERTY", false);
+          break;
+      case _NUM :
+          oled_write("NUM Layer", false);
+          break;
+      case _FKEY : 
+          oled_write("FKEY Layer", false);
+          break;
+      case _MOUSE :
+          oled_write("MOUSE Layer", false);
+          break;
+  }
+
+  return false;
 }
 
 #endif
