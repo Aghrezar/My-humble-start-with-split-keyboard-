@@ -86,15 +86,14 @@ bool oled_task_user() {
       case _MOUSE :
           oled_write("MOUSE Layer\n", false);
           break;
-  }
-    {
+      }
         // Host Keyboard LED Status
     led_t led_state = host_keyboard_led_state();
     oled_write_P(led_state.num_lock ? PSTR("NUM ") : PSTR("    "), false);
     oled_write_P(led_state.caps_lock ? PSTR("CAP ") : PSTR("    "), false);
     oled_write_P(led_state.scroll_lock ? PSTR("SCR ") : PSTR("    "), false);
     
-  }} else {
+  } else {
     
 render_logo();  // Renders a static logo
         oled_scroll_left();  // Turns on scrolling
