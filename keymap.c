@@ -123,7 +123,7 @@ bool oled_task_user() {
   } else {
     
 render_logo();  // Renders a static logo
-        oled_scroll_left();  // Turns on scrolling
+     //   oled_scroll_left();  // Turns on scrolling
   }
   return false;
 }
