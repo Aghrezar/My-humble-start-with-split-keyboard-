@@ -21,10 +21,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 //num
 [_NUM] = LAYOUT(
-  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                             KC_PSCR,   KC_PGUP, KC_P7,  KC_P8,  KC_P9,   KC_PAST,
-  _______, XXXXXXX, XXXXXXX, XXXXXXX,  KC_UP,  XXXXXXX,                             KC_INSERT, KC_PGDN, KC_P4,  KC_P5,  KC_P6,   KC_PMNS,
-  KC_CAPS, XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,                             KC_DEL,    KC_HOME, KC_P1,  KC_P2,  KC_P3,   KC_PPLS,
-  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_COPY,           KC_PSTE, KC_EXEC,   KC_END,  KC_P0, XXXXXXX, KC_PCMM, KC_PEQL,
+  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                             KC_PSCR,   KC_P7,  KC_P8,  KC_P9,   KC_PAST, _______,
+  _______, XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX, XXXXXXX,                             KC_INSERT, KC_P4,  KC_P5,  KC_P6,   KC_PMNS, _______,
+  KC_CAPS, KC_LEFT, KC_DOWN, KC_RGH,  XXXXXXX, XXXXXXX,                             KC_DEL,    KC_P1,  KC_P2,  KC_P3,   KC_PPLS, _______,
+  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PGUP,           KC_PGDN, KC_HOME,   KC_END,  KC_P0, KC_PCMM, KC_PEQL, _______,
                         _______, _______, _______, _______,                    _______, _______, _______, MO(_MOUSE)
 ),
 
