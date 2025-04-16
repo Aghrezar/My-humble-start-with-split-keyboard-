@@ -1,9 +1,9 @@
 {
     "manufacturer": "Aghrezar",
-    "keyboard_name": "escariot58",
+    "keyboard_name": "mxk60",
     "diode_direction": "COL2ROW",
 	"processor": "atmega32u4",
-	"bootloader": "caterina",
+	"bootloader": "caterina"
 	"url": "",
     "usb": {
         "device_version": "1.0.0",
