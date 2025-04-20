@@ -1,6 +1,6 @@
 {
     "manufacturer": "Aghrezar",
-    "keyboard_name": "mxk60",
+    "keyboard_name": "mxek60",
     "diode_direction": "COL2ROW",
 	"processor": "atmega32u4",
 	"bootloader": "caterina"
