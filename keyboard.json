@@ -11,9 +11,9 @@
         "vid": "0xFEED"
 						},
     "features": {
-        "bootmagic": true,
+        "bootmagic": false,
         "extrakey": true,
-        "mousekey": true,
+        "mousekey": true
 						},
 
 	
