@@ -1,4 +1,4 @@
 SERIAL_DRIVER = bitbang
 SPLIT_KEYBOARD = yes
-//OLED_ENABLE = no edit if oled is added
+OLED_ENABLE = yes
 LTO_ENABLE = yes
