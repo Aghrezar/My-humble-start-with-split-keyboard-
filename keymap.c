@@ -48,53 +48,53 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 
-// #ifdef OLED_ENABLE
-//qmk logo for test 
-//static void render_logo(void) {
-//    static const char PROGMEM logo[] = {
-// INSERT LOGO HERE
-//    };
-//oled_write_P(logo, sizeof(logo));
-//}
+ #ifdef OLED_ENABLE
+//logo 
+static void render_logo(void) {
+    static const char PROGMEM logo[] = {
+ //BITMAP 4 LOGO SUDA
+    };
+oled_write_P(logo, sizeof(logo));
+}
 
 
-//oled_rotation_t oled_init_user(oled_rotation_t rotation) {
-//  if (!is_keyboard_left()){
-//    return OLED_ROTATION_180;  // flips the display 180 degrees if offhand
-//  }
-//    return rotation;
-//}
+oled_rotation_t oled_init_user(oled_rotation_t rotation) {
+  if (!is_keyboard_left()){
+    return OLED_ROTATION_180;  // flips the display 180 degrees if offhand
+  }
+    return rotation;
+}
 
-//bool oled_task_user() {
-  // Set cursor position
-//  if (is_keyboard_master()) {
-  // Switch on current active layer
-//  switch (get_highest_layer(layer_state)) {
-//      case _QWERTY :
-//          oled_write("QWERTY\n", false);
-//          break;
-//      case _NUM :
-//          oled_write("NUM Layer\n", false);
-//          break;
-//      case _FKEY : 
-//          oled_write("FKEY Layer\n", false);
-//          break;
-//      case _MOUSE :
-//          oled_write("MOUSE Layer\n", false);
-//          break;
-//      }
+bool oled_task_user() {
+   Set cursor position
+  if (is_keyboard_master()) {
+ //Switch on current active layer
+  switch (get_highest_layer(layer_state)) {
+     case _QWERTY :
+         oled_write("QWERTY\n", false);
+          break;
+      case _NUM :
+          oled_write("NUM Layer\n", false);
+          break;
+      case _FKEY : 
+          oled_write("FKEY Layer\n", false);
+          break;
+      case _MOUSE :
+          oled_write("MOUSE Layer\n", false);
+          break;
+      }
         // Host Keyboard LED Status
-//    led_t led_state = host_keyboard_led_state();
-//    oled_write_P(led_state.num_lock ? PSTR("NUM ") : PSTR("    "), false);
-//    oled_write_P(led_state.caps_lock ? PSTR("CAP ") : PSTR("    "), false);
-//    oled_write_P(led_state.scroll_lock ? PSTR("SCR ") : PSTR("    "), false);
+    led_t led_state = host_keyboard_led_state();
+    oled_write_P(led_state.num_lock ? PSTR("NUM ") : PSTR("    "), false);
+    oled_write_P(led_state.caps_lock ? PSTR("CAP ") : PSTR("    "), false);
+    oled_write_P(led_state.scroll_lock ? PSTR("SCR ") : PSTR("    "), false);
     
-//  } else {
+  } else {
     
-//render_logo();  // Renders a static logo
-     //   oled_scroll_left();  // Turns on scrolling
-//  }
-//  return false;
-//}
+render_logo();  // Renders a static logo
+        oled_scroll_left();  // Turns on scrolling
+  }
+  return false;
+}
 
-//#endif
+#endif
