@@ -4,7 +4,7 @@
     "diode_direction": "COL2ROW",
 	"processor": "atmega32u4",
 	"bootloader": "caterina"
-	"url": "",
+	"url": "https://github.com/Aghrezar/My-humble-start-with-split-keyboard-/tree/And-another-one",
     "usb": {
         "device_version": "1.0.0",
         "pid": "0x0000",
