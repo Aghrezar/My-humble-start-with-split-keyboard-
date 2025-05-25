@@ -1,4 +1,4 @@
-
+//qmk flash -kb mxec60 -km default -bl avrdude-split-left or right
 #include QMK_KEYBOARD_H
 
 enum layer_number {
