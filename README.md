@@ -14,3 +14,6 @@ parts required:
 * 2x 3D printed shells (need to design my own it seams)
 * key caps
 * bits and bobs (screws, solder, wire...)
+  
+![ Alt Text](https://github.com/Aghrezar/My-humble-start-with-split-keyboard-/blob/Humble-start/keyboard-layout.png)
+![ Alt Text](https://github.com/Aghrezar/My-humble-start-with-split-keyboard-/blob/Humble-start/IMG_20250420_002403_019.jpg)
