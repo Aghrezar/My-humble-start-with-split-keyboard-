@@ -25,7 +25,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, XXXXXXX, KC_UP, XXXXXXX,   XXXXXXX,  KC_END,                             KC_INSERT, KC_P4,  KC_P5,   KC_P6,   KC_PMNS, _______,
   _______, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX,                             KC_DEL,    KC_P1,  KC_P2,   KC_P3,   KC_PPLS, _______,
   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PGUP,           KC_PGDN, XXXXXXX,   KC_P0,  XXXXXXX, KC_PCMM, KC_PEQL, _______,
-                        _______, _______, _______, _______,                    _______, _______, _______, MO(_MOUSE)
+                        _______, _______, _______, _______,                    _______, _______, _______, LT(_MOUSE, KC_EQL)
 ),
 
 //fkey
